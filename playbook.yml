@@ -1,0 +1,30 @@
+---
+- hosts: apps
+  become: true
+  tasks:
+    - name: Copy file to default service location
+      copy:
+        src: /opt/nodejs.service
+        dest: /etc/systemd/system/nodejs.service
+
+    - name: Copy directory to remote hosts in /opt
+      copy:
+        src: /opt/pure/
+        dest: /opt/nodejs-app/
+        directory_mode: '0755'
+
+    - name: Reload systemd daemon
+      systemd:
+        daemon_reload: yes
+
+    - name: Install npm module
+      npm:
+        path: /opt/nodejs-app/
+
+    - name: Start service
+      systemd:
+        name: nodejs
+        state: restarted
+        enabled: true
+...
+

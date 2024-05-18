@@ -1,0 +1,17 @@
+{
+  "name": "nodejsapp",
+  "version": "1.0.0",
+  "description": "Using express to give an idea of using nodejs with modules and how the deployment process looks like",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.4.0"
+  }
+}
