@@ -28,7 +28,8 @@ Before running the pipeline, ensure you have the following:
 
 ## Terraform
 
-Terraform is used to create the full infrastructure on AWS. The Terraform configuration creates a VPC, two subnets in different availability zones, an internet gateway, a route table for the public subnets, a security group for the EC2 instances, an Application Load Balancer, two EC2 instances, and an Elastic IP for each EC2 instance.
+Terraform is used to create the full infrastructure on AWS. The Terraform configuration creates a VPC, two subnets in different availability zones, an internet gateway, a route table for the public subnets, a security group for the EC2 instances, an Application Load Balancer, two EC2 instances, and an Elastic IP for each EC2 instance. 
+Then fills the inventory file IPs dynamically from Terraform output from created two EC2 instances
 
 ## Jenkins
 
