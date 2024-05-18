@@ -1,6 +1,7 @@
 # Node.js-Deployment-Pipeline-on-AWS
 This repository contains the configuration files and scripts for deploying a Node.js application on AWS using GitLab, Jenkins, Terraform, and Ansible.
 
+
 ![alt text](pipeline-aws5.png)
 
 
